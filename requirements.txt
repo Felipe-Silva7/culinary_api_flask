@@ -1,1 +1,8 @@
+# Framework principal da API
 flask
+
+# Carrega variáveis de ambiente do arquivo .env
+python-dotenv
+
+# SDK para integração com Firebase e Firestore
+firebase_admin

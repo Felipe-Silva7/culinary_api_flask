@@ -1,3 +1,5 @@
 __pycache__/
 *.pyc
 venv/
+api_cred.json
+.env
