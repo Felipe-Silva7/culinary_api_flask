@@ -2,18 +2,15 @@ import os
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
-from dotenv import load_dotenv
-
-# Carrega variáveis de ambiente do arquivo .env
-load_dotenv()
+from flask import json
 
 try:
     # Obtém o caminho para o arquivo de credenciais da Service Account 
-    cred = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
+    cred = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")
 
     # Inicializa o Firebase Admin SDK apenas se ainda não estiver inicializado
     if not firebase_admin._apps:
-        cred = credentials.Certificate(cred)
+        cred = credentials.Certificate(json.loads(cred))
         firebase_admin.initialize_app(cred)
 
     # Cria uma instância do cliente Firestore
