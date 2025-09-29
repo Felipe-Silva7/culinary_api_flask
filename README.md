@@ -5,6 +5,9 @@ O projeto foi estruturado seguindo **boas práticas de arquitetura de software**
 
 A API está hospedada e disponível na plataforma **Render**.
 
+📄 [Apresentação da API (PDF)](Construindo APIs escaláveis com Flask, Firestore e Render.pdf)
+
+
 ---
 
 ## 🚀 Live Demo
